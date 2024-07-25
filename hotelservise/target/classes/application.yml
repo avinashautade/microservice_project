@@ -1,0 +1,40 @@
+
+server:
+  port: 8082
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/microservices
+#    username: root
+#    password: aA@7030225457
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#    jpa:
+#     hibernate:
+#      ddl-auto: update
+#      show-sql: true
+#
+#
+#
+
+spring:
+
+  datasource:
+    password: aA@7030225457
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import: configserver:http://localhost:5050
+
+##eureka:
+##  instance:
+##    prefer-ip-address: true
+##  client:
+##    fetch-registry: true
+##    register-with-eureka: true
+##    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
